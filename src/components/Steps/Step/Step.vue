@@ -14,7 +14,7 @@ const isSelected = computed(() => {
 </script>
 
 <template>
-  <div v-show="isSelected">
+  <div class="flex justify-center" v-show="isSelected">
     <slot />
   </div>
 </template>
