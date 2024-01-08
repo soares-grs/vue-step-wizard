@@ -1,7 +1,22 @@
-# Vue 3 + Vite
+## Vue Step Wizard
+Este é um projeto que tem como intenção disponibilizar componentes que montam o padrão de Step Wizard e que podem ser usados em qualquer projeto Vue.js
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Features
+- Formação de passos dinâmica
+- Atribuição de variáveis "form" para verificação dos passos
+- Bloqueio de passos por verificação de preenchimento
 
-## Recommended IDE Setup
+## Metas
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [ ] Tornar a passagem de cor do backgronud dinâmica
+- [ ] Botões de avançar e voltar
+- [ ] Personalizar ações dos botões de avançar e voltar
+- [ ] Deixar a verificação de passos opcional
+- [ ] Deixar o bloqueio por verificação de passos opcional
+- [ ] Responsividade
+
+## Stacks
+- VueJs
+- Tailwind CSS
+- Floating Vue
+- Commitzen
