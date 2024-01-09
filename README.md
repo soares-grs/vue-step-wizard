@@ -13,6 +13,7 @@ Este é um projeto que tem como intenção disponibilizar componentes que montam
 - [ ] Personalizar ações dos botões de avançar e voltar
 - [ ] Deixar a verificação de passos opcional
 - [ ] Deixar o bloqueio por verificação de passos opcional
+- [ ] Criação de referências dinâmicas
 - [ ] Responsividade
 
 ## Stacks
