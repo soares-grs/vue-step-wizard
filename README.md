@@ -1,20 +1,20 @@
 ## Vue Step Wizard
-Este é um projeto que tem como intenção disponibilizar componentes que montam o padrão de Step Wizard e que podem ser usados em qualquer projeto Vue.js
+This is a project that aims to provide components that build the Step Wizard pattern and that can be used in any Vue.js project
 
 ## Features
-- Formação de passos dinâmica
-- Atribuição de variáveis "form" para verificação dos passos
-- Bloqueio de passos por verificação de preenchimento
+- Dynamic step formation
+- Assignment of "form" variables to check the steps
+- Blocking of steps by completion check
 
-## Metas
+## Goals
 
-- [ ] Tornar a passagem de cor do backgronud dinâmica
-- [ ] Botões de avançar e voltar
-- [ ] Personalizar ações dos botões de avançar e voltar
-- [ ] Deixar a verificação de passos opcional
-- [ ] Deixar o bloqueio por verificação de passos opcional
-- [ ] Criação de referências dinâmicas
-- [ ] Responsividade
+- [ ] Make the background color transition dynamic
+- [ ] Forward and back buttons
+- [ ] Customize forward and back button actions
+- [ ] Leave step checking optional
+- [ ] Leave step check blocking optional
+- [ ] Creating dynamic references
+- [ ] Responsiveness
 
 ## Stacks
 - VueJs
