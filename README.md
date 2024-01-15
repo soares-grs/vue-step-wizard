@@ -11,8 +11,8 @@ This is a project that aims to provide components that build the Step Wizard pat
 - [ ] Make the background color transition dynamic
 - [ ] Forward and back buttons
 - [ ] Customize forward and back button actions
-- [ ] Leave step checking optional
-- [ ] Leave step check blocking optional
+- [x] Step checking optional
+- [x] Step check blocking optional
 - [ ] Creating dynamic references
 - [ ] Responsiveness
 
