@@ -1,6 +1,6 @@
 <script setup>
-import { filledService } from "../service/filled-service";
-import { stepItemService } from "../service/step-item-service";
+import { filledService } from "../service/steps/filled-service.js";
+import { stepItemService } from "../service/steps/step-item-service.js";
 
 const props = defineProps(["index", "selectedReference", "info", "stepInfos", "useFieldToBeFilled"]);
 

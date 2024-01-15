@@ -8,12 +8,12 @@ const pessoa = {nome: '', nome2: ''}
 </script>
 
 <template>
-  <StepGroup :useFieldToBeFilled="false">
-    <Step :fieldToBeFilled="pessoa.nome" reference="Tab 1" description="Primeiro Passo">
-        <h1>Item do primeiro passo</h1>
+  <StepGroup>
+    <Step :fieldToBeFilled="pessoa.nome" reference="Tab 1" description="First Step">
+        <h1>First Item</h1>
     </Step>
-    <Step :fieldToBeFilled="pessoa.nome2" reference="Tab 2" description="Segundo Passo">
-        <h1>Item do segundo passo</h1>
+    <Step :fieldToBeFilled="pessoa.nome2" reference="Tab 2" description="Second Step">
+        <h1>Second Item</h1>
     </Step>
   </StepGroup>
 </template>

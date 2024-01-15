@@ -22,7 +22,7 @@ export function stepItemClass(index, selectedReference, info, stepInfos, useFiel
   
   export function stepItemTooltip(info, selectedReference, index, useFieldToBeFilled, stepFilled) {
     return useFieldToBeFilled && !filledService.isFieldFilled(info) && selectedReference !== info.reference
-      ? `Preencha a etapa ${index} para liberar esta etapa`
+      ? `Complete the ${index} step to release this step`
       : info.description;
   }
   
