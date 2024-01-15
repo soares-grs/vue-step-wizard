@@ -1,30 +1,36 @@
 <script setup>
 import { filledService } from "../service/filled-service";
 
-const props = defineProps(["index", "selectedReference", "info", "stepInfos"]);
+const props = defineProps(["index", "selectedReference", "info", "stepInfos", "useFieldToBeFilled"]);
+
+const emits = defineEmits(["selectStep"]);
+
 </script>
 
 <template>
   <li
     class="flex justify-center items-center p-2 m-8 w-10 h-10 rounded-full relative"
     :class="[
-      !filledService.isPreviousStepFilled(index)
+      useFieldToBeFilled &&
+      !filledService.isPreviousStepFilled(index, stepInfos)
         ? 'opacity-80 cursor-not-allowed'
-        : '',
-      !filledService.isFieldFilled(info)
-        ? selectedReference === info.reference
+        : 'cursor-pointer',
+      useFieldToBeFilled
+        ? filledService.isFieldFilled(info)
+          ? 'bg-green-500 text-white hover:cursor-pointer'
+          : selectedReference === info.reference
+            ? 'bg-[#314270] hover:bg-[#243155] hover:cursor-pointer text-white'
+            : 'bg-slate-100 text-[#314270]'
+        : selectedReference === info.reference
           ? 'bg-[#314270] hover:bg-[#243155] hover:cursor-pointer text-white'
-          : 'bg-slate-100 text-[#314270]'
-        : filledService.isFieldFilled(info)
-        ? 'bg-green-500 text-white hover:cursor-pointer'
-        : '',
+          : 'bg-slate-100 text-[#314270]',
     ]"
     v-tooltip="
-      !filledService.isFieldFilled(info) && selectedReference !== info.reference
+      useFieldToBeFilled && !filledService.isFieldFilled(info) && selectedReference !== info.reference
         ? `Preencha a etapa ${index} para liberar esta etapa`
         : info.description
     "
-    @click="filledService.isPreviousStepFilled(index) && selectStep(index)"
+    @click="!useFieldToBeFilled || stepFilled ? $emit('selectStep') : filledService.isPreviousStepFilled(index, stepInfos) && $emit('selectStep')"
   >
     <p>{{ index + 1 }}</p>
     <p

@@ -6,9 +6,9 @@ const isFieldFilled = (info) => {
   );
 };
 
-const isPreviousStepFilled = (index) => {
+const isPreviousStepFilled = (index, stepInfosArray) => {
   if (index > 0) {
-    const previousStep = stepInfos.value[index - 1];
+    const previousStep = stepInfosArray[index - 1];
     return isFieldFilled(previousStep);
   }
   return true;

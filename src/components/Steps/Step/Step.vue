@@ -1,5 +1,5 @@
 <script setup>
-import { computed, inject } from "vue";
+import { computed, inject, ref } from "vue";
 
 const props = defineProps({
   reference: String,
@@ -7,8 +7,9 @@ const props = defineProps({
   fieldToBeFilled: Object || Array,
 });
 
+const selectedReference = inject("selectedReference", ref(null));
+
 const isSelected = computed(() => {
-  const selectedReference = inject("selectedReference");
   return props.reference === selectedReference.value;
 });
 </script>
