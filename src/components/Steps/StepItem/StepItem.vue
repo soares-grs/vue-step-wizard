@@ -15,7 +15,7 @@ const emits = defineEmits(["selectStep"]);
     v-tooltip="stepItemService.stepItemTooltip(info, selectedReference, index, useFieldToBeFilled, stepFilled)"
     @click="stepItemService.stepItemClickAction(index, useFieldToBeFilled, stepFilled, $emit, stepInfos)"
   >
-    <p>{{ index + 1 }}</p>
+    <p data-test="step-number">{{ index + 1 }}</p>
     <p
       class="absolute top-9 lg:w-32 text-base text-center lg:mt-3 ml-3 lg:mx-auto text-slate-600"
     >
